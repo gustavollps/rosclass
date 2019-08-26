@@ -4,7 +4,7 @@ import rospy as rp
 from std_msgs.msg import String
 from geometry_msgs.msg import Twist
 
-rp.init_node('node3')
+rp.init_node('node6')
 
 # variavel para receber o valor da msg
 valor = 0

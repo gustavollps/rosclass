@@ -3,7 +3,9 @@
 import rospy as rp
 from std_msgs.msg import String
 
-rp.init_node('node1')
+rp.init_node('node1', anonymous=True)
+# anynomous: mata outro node com nome igual na inicializacao
+# caso contrario, adiciona um numero na frente do novo node
 
 msg = String()
 msg.data = 'coisa'

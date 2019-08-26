@@ -25,9 +25,9 @@ def callBack_var(msg):
     process_var = msg.linear.x
 
 
-sub = rp.Subscribe('/setpoint', Twist, callBack_setpoint)
-sub = rp.Subscribe('/process_var', Twist, callBack_var)
-pub = rp.Publisher('/output', Twist)
+sub = rp.Subscriber('/setpoint', Twist, callBack_setpoint)
+sub2 = rp.Subscriber('/process_var', Twist, callBack_var)
+pub = rp.Publisher('/output', Twist, queue_size=1)
 
 
 def timerCallBack(event):
